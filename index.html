@@ -7,15 +7,15 @@
   <style>  
     /* Color system */
     :root {
-      --bg: #0f1724;       /* Background */
-      --card: #0b1220;     /* Card background */
-      --accent: #7dd3fc;   /* Accent (headings, highlights) */
-      --muted: #9ca3af;    /* Secondary text */
-      --highlight: #22c55e;/* Green highlight */
-      --warning: #facc15;  /* Yellow for subheadings */
+      --bg: #0f1724;
+      --card: #0b1220;
+      --accent: #7dd3fc;
+      --muted: #9ca3af;
+      --highlight: #22c55e;
+      --warning: #facc15;
+      --whatsapp: #25d366;
     }
 
-    /* Base styles */
     html, body {
       height: 100%;
       margin: 0;
@@ -30,22 +30,6 @@
       padding: 20px;
     }
 
-    /* Particle background */
-    .particle {
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      background: rgba(125,211,252,0.5);
-      border-radius: 50%;
-      animation: floatUp 8s linear infinite;
-      opacity: 0.7;
-    }
-    @keyframes floatUp {
-      0% { transform: translateY(100vh) scale(0.5);}
-      50% { opacity: 0.3; }
-      100% { transform: translateY(-20vh) scale(1);}
-    }
-
     /* Card container */
     .card {
       background: rgba(11,18,32,0.95);
@@ -57,55 +41,78 @@
       margin: 20px auto;
       position: relative;
       z-index: 1;
+      text-align: center;
     }
 
     /* Typography */
     h1 {
       margin: 0 0 12px;
-      font-size: clamp(24px,5vw,40px);
+      font-size: clamp(26px,5vw,42px);
       letter-spacing: 0.6px;
       color: var(--accent);
-      text-align: center;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease;
     }
     h2 {
       margin: 20px 0 10px;
       font-size: 22px;
       color: var(--warning);
-      text-align: center;
     }
     p {
-      margin: 0 0 18px;
+      margin: 0 0 14px;
       font-size: clamp(14px,2.2vw,18px);
       color: var(--muted);
-      text-align: center;
+      line-height: 1.6;
     }
     .highlight {
-      margin: 0 0 18px;
       font-size: 16px;
       font-weight: 600;
       color: var(--highlight);
-      text-align: center;
+      margin-bottom: 18px;
     }
-    .name {
+
+    /* WhatsApp button */
+    .whatsapp-btn {
       display: inline-block;
-      background: linear-gradient(90deg, #7dd3fc, #60a5fa);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      font-weight: 700;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: var(--whatsapp);
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .whatsapp-btn:hover {
+      background: #1ebe5d;
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: var(--muted);
     }
   </style>  
 </head>  
 <body>  
 
   <div class="card">  
-    <h1>Karthik Hyderabad — Forex</h1>  
-    <p>Professional solutions for algorithmic trading, custom indicators, and strategies.</p>  
-    <h2>Services</h2>
-    <p class="highlight">MT4 / MT5 Indicators, Strategies & EAs | TradingView Pine Scripts</p>
+    <h1>From Hyderabad</h1>  
+
+    <p>🚀 I transform your trading ideas into fully automated solutions for TradingView, MT4, and MT5 platforms.</p>  
+    <p>🚀 Custom Forex indicators and TradingView strategies, tailored for you and delivered within 24 hours.</p>  
+    <p>💡 Have a strategy? I can convert it into an automated solution for TradingView or MT4/MT5 in just 24 hours.</p>  
+
+    <h2>📌 My Services</h2>  
+    <p>⚙️ Strategy to Automation (TradingView, MT4, MT5)</p>  
+    <p>📊 Custom Forex Indicators</p>  
+    <p>📢 Indicator-based Alerts</p>  
+    <p>🇮🇳 Alerts & Indicators for Indian Market</p>  
+    <p>🌍 Alerts & Indicators for Forex Market</p>  
+
+    <a class="whatsapp-btn" href="https://wa.me/919493980751" target="_blank">📞 Chat on WhatsApp</a>  
+
+    <footer>© 2025 Karthik Hyderabad Forex Trading Solutions</footer>
   </div>  
 
 </body>  
