@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />  
   <title>Karthik Hyderabad — Forex</title>  
   <style>  
+    /* Global box-sizing */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
     /* Color system */
     :root {
       --bg: #0f1724;
@@ -37,7 +42,7 @@
       background: linear-gradient(90deg, #0b1220, #1e293b);
       color: var(--accent);
       text-align: center;
-      padding: 16px;
+      padding: clamp(12px, 2vw, 16px);
       font-size: clamp(14px, 2vw, 18px);
       font-weight: 600;
       box-shadow: 0 4px 10px rgba(0,0,0,0.4);
@@ -49,15 +54,16 @@
     /* Card container */
     .card {
       background: rgba(11,18,32,0.95);
-      padding: 30px 24px;
+      padding: clamp(20px, 5vw, 30px);
       border-radius: 18px;
       box-shadow: 0 8px 30px rgba(2,6,23,0.6);
       max-width: 900px;
-      width: 100%;
+      width: 95%;
       margin: 30px auto;
       position: relative;
       z-index: 1;
       text-align: center;
+      overflow-wrap: break-word; /* prevent text cutting */
     }
 
     /* Typography */
@@ -107,6 +113,17 @@
       margin-top: 30px;
       font-size: 14px;
       color: var(--muted);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 500px) {
+      .banner {
+        font-size: clamp(12px, 2.5vw, 16px);
+        padding: 12px 10px;
+      }
+      .card {
+        padding: 20px 16px;
+      }
     }
   </style>  
 </head>  
