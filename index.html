@@ -1,30 +1,33 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Karthik Hyderabad — Forex</title>
-  <style>
+<html lang="en">  
+<head>  
+  <meta charset="utf-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />  
+  <title>Karthik Hyderabad — Forex</title>  
+  <style>  
+    /* Color system */
     :root {
-      --bg: #0f1724;
-      --card: #0b1220;
-      --accent: #7dd3fc;
-      --muted: #9ca3af;
+      --bg: #0f1724;       /* Background */
+      --card: #0b1220;     /* Card background */
+      --accent: #7dd3fc;   /* Accent (headings, highlights) */
+      --muted: #9ca3af;    /* Secondary text */
+      --highlight: #22c55e;/* Green highlight */
+      --warning: #facc15;  /* Yellow for subheadings */
     }
-    html,body {
+
+    /* Base styles */
+    html, body {
       height: 100%;
       margin: 0;
-      font-family: Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;
+      font-family: Inter, ui-sans-serif, system-ui, Segoe UI, Roboto, 'Helvetica Neue', Arial;
       overflow-x: hidden;
       background: var(--bg);
       position: relative;
-    }
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
       color: var(--accent);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 20px;
     }
 
     /* Particle background */
@@ -39,10 +42,11 @@
     }
     @keyframes floatUp {
       0% { transform: translateY(100vh) scale(0.5);}
-      50% { opacity:0.3; }
+      50% { opacity: 0.3; }
       100% { transform: translateY(-20vh) scale(1);}
     }
 
+    /* Card container */
     .card {
       background: rgba(11,18,32,0.95);
       padding: 30px 24px;
@@ -55,12 +59,12 @@
       z-index: 1;
     }
 
-    /* Main Heading */
+    /* Typography */
     h1 {
       margin: 0 0 12px;
       font-size: clamp(24px,5vw,40px);
       letter-spacing: 0.6px;
-      color: var(--accent9);
+      color: var(--accent);
       text-align: center;
       opacity: 0;
       transform: translateY(20px);
@@ -69,7 +73,7 @@
     h2 {
       margin: 20px 0 10px;
       font-size: 22px;
-      color: #facc15;
+      color: var(--warning);
       text-align: center;
     }
     p {
@@ -82,94 +86,27 @@
       margin: 0 0 18px;
       font-size: 16px;
       font-weight: 600;
-      color: #22c55e;
+      color: var(--highlight);
       text-align: center;
     }
     .name {
       display: inline-block;
-      background: linear-gradient(90deg,#7dd3fc,#60a5fa);
+      background: linear-gradient(90deg, #7dd3fc, #60a5fa);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
       font-weight: 700;
     }
+  </style>  
+</head>  
+<body>  
 
-    /* Banner */
-    .banner {
-      background: linear-gradient(90deg, #0ea5e9, #38bdf8, #0ea5e9);
-      color: white;
-      font-size: clamp(14px, 2vw, 18px);
-      font-weight: 600;
-      text-align: center;
-      padding: 12px 20px 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(14,165,233,0.4);
-      margin-top: 10px;
-      width: 100%;
-      max-width: 950px;
-      animation: fadeIn 1.2s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(-10px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
+  <div class="card">  
+    <h1>Karthik Hyderabad — Forex</h1>  
+    <p>Professional solutions for algorithmic trading, custom indicators, and strategies.</p>  
+    <h2>Services</h2>
+    <p class="highlight">MT4 / MT5 Indicators, Strategies & EAs | TradingView Pine Scripts</p>
+  </div>  
 
-    /* WhatsApp Button (shared style) */
-    .whatsapp-btn {
-      background: #25D366;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      border: none;
-      border-radius: 50px;
-      padding: 12px 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      transition: transform 0.2s ease;
-    }
-    .whatsapp-btn:hover {
-      transform: scale(1.05);
-    }
-    .whatsapp-btn img {
-      width: 22px;
-      height: 22px;
-    }
-
-    /* Floating WhatsApp Button */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Banner Section -->
-  <div class="banner">
-    🚀 MT4 / MT5 Custom Indicators, Strategies & Expert Advisors (EAs) | TradingView Pine Scripts for Custom Indicators & Strategies
-    <br><br>
-    <a href="https://wa.me/919493980751" target="_blank" class="whatsapp-btn">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"/>
-      Chat on WhatsApp
-    </a>
-  </div>
-
-  <div class="card">
-    <h1>Karthik Hyderabad — Forex</h1>
-    <p>Professional solutions for algorithmic trading, custom indicators, and strategies.</p>
-  </div>
-
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/919493980751" target="_blank" class="whatsapp-btn whatsapp-float">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"/>
-    Chat on WhatsApp
-  </a>
-
-</body>
+</body>  
 </html>
