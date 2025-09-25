@@ -5,9 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Karthik Hyderabad — Forex</title>
   <style>
-    :root{--bg:#0f1724;--card:#0b1220;--accent:#7dd3fc;--muted:#9ca3af}
-    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;overflow-x:hidden; background:var(--bg); position:relative;}
-    body{display:flex;align-items:flex-start;justify-content:center;padding:20px; color:var(--accent);}
+    :root {
+      --bg: #0f1724;
+      --card: #0b1220;
+      --accent: #7dd3fc;
+      --muted: #9ca3af;
+    }
+    html,body {
+      height: 100%;
+      margin: 0;
+      font-family: Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;
+      overflow-x: hidden;
+      background: var(--bg);
+      position: relative;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      color: var(--accent);
+    }
 
     /* Particle background */
     .particle {
@@ -25,81 +43,133 @@
       100% { transform: translateY(-20vh) scale(1);}
     }
 
-    .card{background:rgba(11,18,32,0.95);padding:30px 24px;border-radius:18px;box-shadow:0 8px 30px rgba(2,6,23,0.6);max-width:900px;width:100%;margin:0 auto;position:relative;z-index:1;}
+    .card {
+      background: rgba(11,18,32,0.95);
+      padding: 30px 24px;
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+      max-width: 900px;
+      width: 100%;
+      margin: 20px auto;
+      position: relative;
+      z-index: 1;
+    }
 
     /* Main Heading */
-    h1{margin:0 0 12px;font-size:clamp(24px,5vw,40px);letter-spacing:0.6px;color:var(--accent9);text-align:center;opacity:0; transform:translateY(20px); transition:all 0.6s ease;}
-    h2{margin:20px 0 10px;font-size:22px;color:#facc15;text-align:center}
-    p{margin:0 0 18px;font-size:clamp(14px,2.2vw,18px);color:var(--muted);text-align:center}
-    .highlight{margin:0 0 18px;font-size:16px;font-weight:600;color:#22c55e;text-align:center}
-    .name{display:inline-block;background:linear-gradient(90deg,#7dd3fc,#60a5fa);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700}
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(24px,5vw,40px);
+      letter-spacing: 0.6px;
+      color: var(--accent9);
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+    h2 {
+      margin: 20px 0 10px;
+      font-size: 22px;
+      color: #facc15;
+      text-align: center;
+    }
+    p {
+      margin: 0 0 18px;
+      font-size: clamp(14px,2.2vw,18px);
+      color: var(--muted);
+      text-align: center;
+    }
+    .highlight {
+      margin: 0 0 18px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #22c55e;
+      text-align: center;
+    }
+    .name {
+      display: inline-block;
+      background: linear-gradient(90deg,#7dd3fc,#60a5fa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 700;
+    }
 
-    .btn{display:inline-block;padding:10px 16px;background:linear-gradient(90deg,#22c55e,#16a34a);color:white;font-size:14px;font-weight:600;text-decoration:none;border-radius:8px;transition:0.3s ease; opacity:0; transform:translateY(20px);}
-    .btn:hover{transform: scale(1.08); box-shadow:0 6px 18px rgba(34,197,94,0.5);}
-    footer{margin-top:16px;color:#6b7280;font-size:12px;text-align:center;opacity:0; transform:translateY(20px);}
+    /* Banner */
+    .banner {
+      background: linear-gradient(90deg, #0ea5e9, #38bdf8, #0ea5e9);
+      color: white;
+      font-size: clamp(14px, 2vw, 18px);
+      font-weight: 600;
+      text-align: center;
+      padding: 12px 20px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(14,165,233,0.4);
+      margin-top: 10px;
+      width: 100%;
+      max-width: 950px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
 
-    .services{margin-top:24px}
-    .service-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:16px}
-    .service-box{background:rgba(255,255,255,0.07);padding:14px;border-radius:12px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.4);font-size:15px;color:#e5e7eb;opacity:0; transform:translateY(20px); transition:transform 0.2s ease, box-shadow 0.2s ease, opacity 0.6s ease;}
-    .service-box span{font-size:22px;display:block;margin-bottom:6px}
-    .service-box:hover{transform:scale(1.05);box-shadow:0 6px 18px rgba(34,197,94,0.5)}
+    /* WhatsApp Button (shared style) */
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+    .whatsapp-btn:hover {
+      transform: scale(1.05);
+    }
+    .whatsapp-btn img {
+      width: 22px;
+      height: 22px;
+    }
 
-    /* Fade-in animation */
-    .fade-in{animation:fadeInUp 0.6s forwards;}
-    @keyframes fadeInUp{
-      0%{opacity:0; transform:translateY(20px);}
-      100%{opacity:1; transform:translateY(0);}
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
     }
   </style>
 </head>
 <body>
-  <!-- Particle Background -->
-  <div id="particles"></div>
 
-  <main class="card">
-    <!-- Main Heading -->
-    <h1 class="fade-in" style="animation-delay:0.1s"> From <span class="name"> Hyderabad </span></h1>
+  <!-- Banner Section -->
+  <div class="banner">
+    🚀 MT4 / MT5 Custom Indicators, Strategies & Expert Advisors (EAs) | TradingView Pine Scripts for Custom Indicators & Strategies
+    <br><br>
+    <a href="https://wa.me/919493980751" target="_blank" class="whatsapp-btn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"/>
+      Chat on WhatsApp
+    </a>
+  </div>
 
-    <!-- Service Heading -->
-    <h2 class="fade-in" style="animation-delay:0.2s">🚀 I transform your trading ideas into fully automated solutions for TradingView, MT4, and MT5 platforms.</h2>
-    <p class="fade-in" style="animation-delay:0.3s">🚀 Custom Forex indicators and TradingView strategies, tailored for you and delivered within 24 hours.</p>
-    <p class="highlight fade-in" style="animation-delay:0.4s">💡 Have a strategy? I can convert it into an automated solution for TradingView or MT4/MT5 in just 24 hours.</p>
+  <div class="card">
+    <h1>Karthik Hyderabad — Forex</h1>
+    <p>Professional solutions for algorithmic trading, custom indicators, and strategies.</p>
+  </div>
 
-    <!-- Services Section -->
-    <section class="services">
-      <h2 class="fade-in" style="animation-delay:0.5s">📌 My Services</h2>
-      <div class="service-list">
-        <div class="service-box fade-in" style="animation-delay:0.6s"><span>⚙️</span> Strategy to Automation (TradingView, MT4, MT5)</div>
-        <div class="service-box fade-in" style="animation-delay:0.7s"><span>📊</span> Custom Forex Indicators</div>
-        <div class="service-box fade-in" style="animation-delay:0.8s"><span>📢</span> Indicator-based Alerts</div>
-        <div class="service-box fade-in" style="animation-delay:0.9s"><span>🇮🇳</span> Alerts & Indicators for Indian Market</div>
-        <div class="service-box fade-in" style="animation-delay:1.0s"><span>🌍</span> Alerts & Indicators for Forex Market</div>
-      </div>
-    </section>
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919493980751" target="_blank" class="whatsapp-btn whatsapp-float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"/>
+    Chat on WhatsApp
+  </a>
 
-    <a class="btn fade-in" style="animation-delay:1.1s" href="https://wa.me/919493980751" target="_blank">📞 Chat on WhatsApp</a>
-    <footer class="fade-in" style="animation-delay:1.2s">© 2025 Karthik Hyderabad Forex Trading Solutions</footer>
-  </main>
-
-  <script>
-    // Fade-in animations
-    window.addEventListener('DOMContentLoaded', () => {
-      const elements = document.querySelectorAll('.fade-in');
-      elements.forEach(el => el.style.opacity = '1');
-
-      // Generate particle elements
-      const particleCount = 40;
-      const container = document.getElementById('particles');
-      for(let i=0;i<particleCount;i++){
-        const p = document.createElement('div');
-        p.classList.add('particle');
-        p.style.left = Math.random() * 100 + 'vw';
-        p.style.animationDuration = (6 + Math.random()*4) + 's';
-        p.style.width = (4 + Math.random()*4) + 'px';
-        p.style.height = p.style.width;
-        container.appendChild(p);
-      }
-    });
-  </script>
 </body>
 </html>
